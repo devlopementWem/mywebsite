@@ -7,7 +7,7 @@
     --accent-color: #ff0080;
     --dark-bg: #0f0f13;
     --card-bg: #191921;
-    --text-color: #e0e0e0;
+    --text-color: #e6e6e6;
 }
 
 body {
@@ -264,4 +264,20 @@ footer a:hover {
 
 .contact-list i {
     font-size: 1.5rem;
+}
+
+
+
+
+
+.text-muted,
+p,
+.project-card p,
+.container p {
+    color: #e6e6e6 !important;
+}
+
+
+.text-muted {
+    color: #cfcfcf !important;
 }
