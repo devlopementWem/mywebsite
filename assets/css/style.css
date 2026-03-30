@@ -1,283 +1,157 @@
-/* Global Styling */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+/* =========================
+   DESIGN SYSTEM
+========================= */
 
 :root {
-    --primary-color: #6a11cb;
-    --secondary-color: #2575fc;
-    --accent-color: #ff0080;
-    --dark-bg: #0f0f13;
-    --card-bg: #191921;
-    --text-color: #e6e6e6;
+
+    /* BRAND */
+    --primary: #6366F1;
+    --primary-600: #4F46E5;
+    --accent: #22D3EE;
+
+    /* BACKGROUND */
+    --bg-0: #020617;
+    --bg-1: #0B1120;
+    --bg-2: #111827;
+
+    /* SURFACE */
+    --surface-0: #111827;
+    --surface-1: #1E293B;
+
+    /* TEXT */
+    --text: #F1F5F9;
+    --text-muted: #94A3B8;
+
+    /* UI */
+    --border: rgba(255,255,255,0.08);
+    --shadow-sm: 0 8px 20px rgba(0,0,0,0.3);
+    --shadow-lg: 0 20px 60px rgba(0,0,0,0.6);
 }
 
+/* BASE */
 body {
     font-family: 'Outfit', sans-serif;
-    background-color: var(--dark-bg);
-    color: var(--text-color);
-    overflow-x: hidden;
+    background: linear-gradient(180deg, var(--bg-0), var(--bg-1));
+    color: var(--text);
+    margin: 0;
+    padding-top: 80px;
 }
 
-/* Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* TEXT */
+h1,h2,h3,h4,h5 { font-weight: 700; }
+p {
+    color: var(--text);
+    line-height: 1.7;
 }
 
-.animate-up {
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out forwards;
+
+
+
+.text-muted {
+    color: var(--text-muted) !important;
 }
 
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
 
-/* Navbar */
-.glass-nav {
-    background: rgba(15, 15, 19, 0.5);
-    backdrop-filter: blur(10px);
-    padding: 1.5rem 0;
-    transition: all 0.3s ease;
-}
-
-.glass-nav.scrolled {
-    background: rgba(15, 15, 19, 0.95);
-    padding: 1rem 0;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-}
-
-.nav-link {
-    font-weight: 500;
-    margin-right: 1rem;
-    transition: color 0.3s;
-}
-
-.nav-link:hover, .nav-link.active {
-    color: var(--secondary-color) !important;
-}
-
-.btn-contact {
-    background-image: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    border: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-contact:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(106, 17, 203, 0.4);
-}
-
-.dropdown-menu {
-    background-color: var(--card-bg);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.dropdown-item {
-    color: var(--text-color);
-}
-
-.dropdown-item:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    color: #fff;
-}
-
-/* Hero Section */
-.hero-section {
-    background: radial-gradient(circle at top right, rgba(37, 117, 252, 0.2), transparent 40%),
-                radial-gradient(circle at bottom left, rgba(106, 17, 203, 0.15), transparent 40%);
-    position: relative;
-    padding-top: 80px; 
-}
 
 .text-gradient {
-    background: linear-gradient(to right, var(--primary-color), var(--secondary-color), var(--accent-color));
+    background: linear-gradient(90deg, var(--primary), var(--accent));
     -webkit-background-clip: text;
-    background-clip: text;
     color: transparent;
-    font-weight: 800;
 }
 
-/* Section Common */
+/* NAVBAR */
+.glass-nav {
+    background: rgba(10, 15, 30, 0.7);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+}
+
+/* SECTION */
 .py-section {
     padding: 6rem 0;
 }
 
-.bg-darker {
-    background-color: rgba(0,0,0,0.2);
-}
-
-.letter-spacing-2 {
-    letter-spacing: 2px;
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-
-img{
-    width:200px ;
-     height:200px;
-}
-
-/* About Section */
-.about-img {
-    transition: transform 0.4s ease;
-border: 2px solid rgba(255,255,255,0.05);
-}
-
-.about-img:hover {
-    transform: scale(1.02) rotate(1deg);
-}
-
-.icon-box {
-    background: rgba(255, 255, 255, 0.05);
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Projects Section */
+/* CARDS */
 .project-card {
-    background-color: var(--card-bg) !important;
-    transition: transform 0.3s ease-in-out;
-    border: 1px solid rgba(255,255,255,0.05) !important;
+    background: var(--surface-0);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: 0.3s;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
 }
 
-.card-img-top img {
-    transition: transform 0.5s ease;
+/* IMAGE EFFECT */
+.project-card img {
+    transition: 0.4s;
 }
 
-.project-card:hover .card-img-top img {
-    transform: scale(1.1);
+.project-card:hover img {
+    transform: scale(1.05);
 }
 
-/* Contact Section */
-.contact-container {
-    background-color: var(--card-bg);
-    border: 1px solid rgba(255,255,255,0.05);
-    background: linear-gradient(135deg, rgba(25, 25, 33, 0.9) 0%, rgba(15, 15, 19, 0.95) 100%);
+/* BUTTONS */
+.btn {
+    border-radius: 50px !important;
 }
 
-.form-control {
-    background: rgba(255, 255, 255, 0.05) !important;
-    color: #fff !important;
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border: none;
 }
 
-.form-control:focus {
-    box-shadow: 0 0 0 0.25rem rgba(106, 17, 203, 0.25);
-    background: rgba(255, 255, 255, 0.08) !important;
+.btn-outline-primary {
+    border: 1px solid var(--accent);
+    color: var(--accent);
 }
 
-.form-control::placeholder {
-    color: rgba(255, 255, 255, 0.4);
+.btn-outline-primary:hover {
+    background: var(--primary);
+    color: white;
 }
 
-/* Footer */
-footer a {
-    transition: color 0.3s;
+/* UTIL */
+.letter-spacing-2 {
+    letter-spacing: 2px;
 }
 
-footer a:hover {
-    color: var(--secondary-color) !important;
-}
-/* زر العودة للصفحة الرئيسية ثابت فوق الفوتر */
+
+
+
 #backToHome {
-    position: fixed;       /* ثابت بالنسبة للنافذة */
-    bottom: 80px;          /* المسافة من أسفل الصفحة (فوق الفوتر) */
-    right: 30px;           /* المسافة من الجهة اليمنى */
-    background-color: var(--primary-color); /* لون الزر الأساسي */
-    color: #fff;           /* لون الأيقونة */
-    font-size: 2rem;       /* حجم الأيقونة */
-    padding: 12px;         /* مسافة داخلية للزر */
-    border-radius: 50%;    /* شكل دائري */
-    z-index: 1000;         /* ليبقى فوق العناصر الأخرى */
-    text-align: center;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* ظل خفيف */
-    transition: all 0.3s ease; /* تأثير الحركة عند المرور */
-}
-
-/* تأثير عند المرور بالماوس */
-#backToHome:hover {
-    background-color: var(--secondary-color);
-    transform: scale(1.1);
-}
-#backToPortfolio {
-    position: fixed;       /* ثابت بالنسبة للنافذة */
-    bottom: 80px;          /* فوق الفوتر */
-    right: 30px;
-    background-color: var(--primary-color);
-    color: #fff;
-    font-size: 2rem;
-    padding: 12px;
-    border-radius: 50%;
-    z-index: 1000;
-    text-align: center;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    transition: all 0.3s ease;
-}
-
-#backToPortfolio:hover {
-    background-color: var(--secondary-color);
-    transform: scale(1.1);
-}
-.contact-container {
-    background-color: var(--card-bg);
-    padding: 2.5rem;
-    border-radius: 1.5rem;
-    text-align: center;
-}
-
-.contact-list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.contact-list li {
-    margin-bottom: 1.5rem;
-    font-size: 1.2rem;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: var(--primary);
+    color: white;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.contact-list li a {
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.contact-list li a:hover {
-    color: var(--secondary-color);
-}
-
-.contact-list i {
-    font-size: 1.5rem;
+    border-radius: 50%;
+    box-shadow: var(--shadow-sm);
 }
 
 
 
+#backToPortfolio {
 
+ position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: var(--primary);
+    color: white;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: var(--shadow-sm);
 
-.text-muted,
-p,
-.project-card p,
-.container p {
-    color: #e6e6e6 !important;
-}
-
-
-.text-muted {
-    color: #cfcfcf !important;
 }
