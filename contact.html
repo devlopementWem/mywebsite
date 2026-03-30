@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> تابدأ مشروعك الآن بدون تردد </title>
+<title>ابدأ مشروعك الآن بدون تردد</title>
 
-<!-- الخطوط والأيقونات -->
+<!-- Fonts & Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
 
-<!-- CSS خارجي -->
+<!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
- <link rel="stylesheet" href="assets/css/style.css">
+
+<!-- DESIGN SYSTEM -->
+<link rel="stylesheet" href="assets/css/design-system.css">
+
+<!-- CUSTOM -->
+<link rel="stylesheet" href="assets/css/style.css">
 
 </head>
+
 <body>
 
 <!-- Navbar -->
@@ -22,60 +28,78 @@
         <a class="navbar-brand fw-bold" href="index.html">
             <i class="bi bi-code-slash me-2"></i>موقعي
         </a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav align-items-center">
                 <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">منهجية العمل</a></li>
-                <li class="nav-item"><a class="nav-link" href="portfolio.html"> المشاريع المنفذة </a></li>
-                <li class="nav-item"><a class="nav-link active" href="contact.html">ابدأ مشروعك</a></li>
+                <li class="nav-item"><a class="nav-link active" href="about.html">   منهجية العمل   </a></li>
+                <li class="nav-item"><a class="nav-link" href="portfolio.html">لمشاريع المنفذة</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">ابدأ مشروعك</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- Contact Info Section -->
-<section id="contact" class="py-section" style="padding-top:100px;">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-6 contact-container">
+<!-- CONTACT -->
+<section id="contact" class="py-section" style="padding-top:120px;">
 
-                <h2 class="display-5 fw-bold mb-4 text-white text-center"> ابدأ مشروعك الآن ولن تندم
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-6">
+
+                <h2 class="display-5 fw-bold mb-4 text-center">
+                    ابدأ مشروعك الآن ولن تندم
                 </h2>
-               <p class="text-muted mb-4 text-center">
-للاستفسارات أو التعاون في مشاريع تطوير الويب، يمكنك التواصل عبر أي من القنوات التالية وسأرد في أقرب وقت ممكن
-</p>
-                <ul class="list-unstyled contact-list">
-                    <li>
+
+                <p class="text-center mb-5">
+                    للاستمارات أو التعاون في مشاريع تطوير الويب، يمكنك التواصل عبر أي من القنوات التالية وسأرد في أقرب وقت ممكن
+                </p>
+
+                <ul class="list-unstyled">
+
+                    <li class="d-flex align-items-center mb-3">
                         <i class="bi bi-telephone-fill me-2 text-primary"></i>
                         <a href="tel:+967737198394">اتصال مباشر</a>
                     </li>
-                    <li>
+
+                    <li class="d-flex align-items-center mb-3">
                         <i class="bi bi-envelope-fill me-2 text-primary"></i>
                         <a href="mailto:zmafya818@email.com">إرسال عبر البريد إلكتروني</a>
                     </li>
-                    <li>
+
+                    <li class="d-flex align-items-center mb-3">
                         <i class="bi bi-whatsapp me-2 text-success"></i>
                         <a href="https://wa.me/967737198394" target="_blank">محادثة واتساب فورية</a>
                     </li>
-                    <li>
+
+                    <li class="d-flex align-items-center mb-3">
                         <i class="bi bi-geo-alt-fill me-2 text-warning"></i>
                         صنعاء، اليمن
                     </li>
+
                 </ul>
 
             </div>
+
         </div>
+
     </div>
+
 </section>
 
-<!-- زر الرجوع -->
+<!-- BACK BUTTON -->
 <a href="index.html" id="backToHome" title="العودة للصفحة الرئيسية">
     <i class="bi bi-house-fill"></i>
 </a>
 
-<!-- JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script></body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
 </html>
