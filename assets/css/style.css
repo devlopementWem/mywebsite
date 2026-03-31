@@ -1,0 +1,195 @@
+/* =========================
+   DESIGN SYSTEM
+========================= */
+
+:root {
+
+    /* BRAND */
+    --primary: #6366F1;
+    --primary-600: #4F46E5;
+    --accent: #22D3EE;
+
+    /* BACKGROUND */
+    --bg-0: #020617;
+    --bg-1: #0B1120;
+    --bg-2: #111827;
+
+    /* SURFACE */
+    --surface-0: #111827;
+    --surface-1: #1E293B;
+
+    /* TEXT */
+    --text: #F1F5F9;
+    --text-muted: #94A3B8;
+
+    /* UI */
+    --border: rgba(255,255,255,0.08);
+    --shadow-sm: 0 8px 20px rgba(0,0,0,0.3);
+    --shadow-lg: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+/* =========================
+   FIX الاتجاه (مهم جداً)
+========================= */
+html {
+    direction: rtl;
+}
+
+/* =========================
+   BASE
+========================= */
+body {
+    font-family: 'Outfit', sans-serif;
+    background: linear-gradient(180deg, var(--bg-0), var(--bg-1));
+    color: var(--text);
+    margin: 0;
+    padding-top: 80px;
+}
+
+/* =========================
+   TEXT
+========================= */
+h1,h2,h3,h4,h5 { 
+    font-weight: 700; 
+    color: var(--text);
+}
+
+p {
+    color: var(--text);
+    line-height: 1.7;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* =========================
+   NAVBAR (تم إصلاحه فقط)
+========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+/* لا تغيير على الشكل فقط تثبيت */
+.glass-nav {
+    background: rgba(10, 15, 30, 0.7);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border);
+}
+
+/* تثبيت المحاذاة */
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* القائمة */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-right: auto;
+}
+
+/* الروابط */
+.nav-link {
+    color: var(--text) !important;
+}
+
+.nav-link.active {
+    color: var(--accent) !important;
+}
+
+/* =========================
+   SECTION
+========================= */
+.py-section {
+    padding: 6rem 0;
+}
+
+/* =========================
+   CARDS
+========================= */
+.project-card {
+    background: var(--surface-0);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* IMAGE EFFECT */
+.project-card img {
+    transition: 0.4s;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+    border-radius: 50px !important;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border: none;
+}
+
+
+
+
+
+.btn-outline-primary {
+    border: 1px solid var(--accent);
+    color: var(--accent);
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* =========================
+   UTIL
+========================= */
+.letter-spacing-2 {
+    letter-spacing: 2px;
+}
+
+/* =========================
+   BACK BUTTON
+========================= */
+#backToHome {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: var(--primary);
+    color: white;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: var(--shadow-sm);
+}
