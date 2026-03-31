@@ -28,7 +28,16 @@
     --shadow-lg: 0 20px 60px rgba(0,0,0,0.6);
 }
 
-/* BASE */
+/* =========================
+   FIX الاتجاه (مهم جداً)
+========================= */
+html {
+    direction: rtl;
+}
+
+/* =========================
+   BASE
+========================= */
 body {
     font-family: 'Outfit', sans-serif;
     background: linear-gradient(180deg, var(--bg-0), var(--bg-1));
@@ -37,21 +46,22 @@ body {
     padding-top: 80px;
 }
 
-/* TEXT */
-h1,h2,h3,h4,h5 { font-weight: 700; }
+/* =========================
+   TEXT
+========================= */
+h1,h2,h3,h4,h5 { 
+    font-weight: 700; 
+    color: var(--text);
+}
+
 p {
     color: var(--text);
     line-height: 1.7;
 }
 
-
-
-
 .text-muted {
     color: var(--text-muted) !important;
 }
-
-
 
 .text-gradient {
     background: linear-gradient(90deg, var(--primary), var(--accent));
@@ -59,19 +69,58 @@ p {
     color: transparent;
 }
 
-/* NAVBAR */
+/* =========================
+   NAVBAR (تم إصلاحه فقط)
+========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+/* لا تغيير على الشكل فقط تثبيت */
 .glass-nav {
     background: rgba(10, 15, 30, 0.7);
     backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--border);
 }
 
-/* SECTION */
+/* تثبيت المحاذاة */
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* القائمة */
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-right: auto;
+}
+
+/* الروابط */
+.nav-link {
+    color: var(--text) !important;
+}
+
+.nav-link.active {
+    color: var(--accent) !important;
+}
+
+/* =========================
+   SECTION
+========================= */
 .py-section {
     padding: 6rem 0;
 }
 
-/* CARDS */
+/* =========================
+   CARDS
+========================= */
 .project-card {
     background: var(--surface-0);
     border: 1px solid var(--border);
@@ -94,7 +143,9 @@ p {
     transform: scale(1.05);
 }
 
-/* BUTTONS */
+/* =========================
+   BUTTONS
+========================= */
 .btn {
     border-radius: 50px !important;
 }
@@ -103,6 +154,10 @@ p {
     background: linear-gradient(135deg, var(--primary), var(--accent));
     border: none;
 }
+
+
+
+
 
 .btn-outline-primary {
     border: 1px solid var(--accent);
@@ -114,14 +169,16 @@ p {
     color: white;
 }
 
-/* UTIL */
+/* =========================
+   UTIL
+========================= */
 .letter-spacing-2 {
     letter-spacing: 2px;
 }
 
-
-
-
+/* =========================
+   BACK BUTTON
+========================= */
 #backToHome {
     position: fixed;
     bottom: 20px;
@@ -135,23 +192,4 @@ p {
     justify-content: center;
     border-radius: 50%;
     box-shadow: var(--shadow-sm);
-}
-
-
-
-#backToPortfolio {
-
- position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background: var(--primary);
-    color: white;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    box-shadow: var(--shadow-sm);
-
 }
